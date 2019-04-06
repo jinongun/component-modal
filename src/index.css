@@ -6,7 +6,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 p{
   margin: 0;
+}
+
+main{
+  text-align: center;
+}
+
+.btn{
+  padding: 12px 24px;
+  border-radius: 5px;
+  background-color: #ad7cef;
+  font-size: 13pt;
+  color: white;
+  border: 0;
+  cursor: pointer;
 }
