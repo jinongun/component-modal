@@ -19,7 +19,7 @@ class App extends Component<RouteComponentProps, any> {
   }
   openModal = () => {
     const { history } = this.props;
-    history.push('/', 'Modal');
+    history.push('/');
     this.setState({
       isModalOpen: true
     })
@@ -31,11 +31,12 @@ class App extends Component<RouteComponentProps, any> {
       isModalOpen: false,
     })
   }
+
   render() {
     return (
       <main className="App">
         <button className="btn" onClick={this.openModal}>Modal Open</button>
-        <Modal isOpen={this.state.isModalOpen} name="Modal-anim">
+        <Modal isOpen={this.state.isModalOpen} close={this.closeModal} name="Modal-anim">
 
           <p className="title">Title</p>
           <div className="content">
@@ -48,7 +49,6 @@ class App extends Component<RouteComponentProps, any> {
           </div>
 
         </Modal>
-
       </main>
     );
   }

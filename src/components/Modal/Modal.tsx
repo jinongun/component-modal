@@ -1,25 +1,26 @@
 import React from 'react';
 import './Modal.scss';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import ReactTransitionGroup from 'react-addons-css-transition-group'
 
-class Modal extends React.Component<any> {
+class Modal extends React.Component<any, any> {
 
   render() {
     return (
       <>
         {
           this.props.isOpen ?
-
-            <ReactCSSTransitionGroup transitionName={this.props.name} transitionEnterTimeout={500}
-              transitionLeaveTimeout={300}>
-              <div className="Modal-overlay" />
+            <ReactTransitionGroup
+              transitionName={this.props.name}
+              transitionEnterTimeout={200}
+              transitionLeaveTimeout={200}
+            >
+              <div className="Modal-overlay" onClick={this.props.close} />
               <div className="Modal">
                 {this.props.children}
               </div>
-            </ReactCSSTransitionGroup>
+            </ReactTransitionGroup>
             :
-            <ReactCSSTransitionGroup transitionName={this.props.name} transitionEnterTimeout={500}
-              transitionLeaveTimeout={300} />
+            <ReactTransitionGroup transitionName={this.props.name} transitionEnterTimeout={200} transitionLeaveTimeout={200} />
         }
       </>
     )
