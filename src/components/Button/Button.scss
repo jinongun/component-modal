@@ -1,0 +1,15 @@
+
+.Button{
+  padding: 12px 24px;
+  border: none;
+  background-color: #f2f3f4;
+  color: #2f2352;
+  font-size: 12pt;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  &.purple{
+    background-color: #ad7cef;
+    color: white;
+  }
+}
